@@ -1,0 +1,50 @@
+.skills {
+  padding: 100px 20px;
+  /* background-color: #f9f9f9; Example background color */
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-category {
+  /* background-color: #fff; */
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(33% - 40px); /* Adjust width as needed */
+  min-width: 200px;
+}
+
+.skill-category h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.skill-list li::before {
+  content: '•'; /* Bullet point */
+  position: absolute;
+  left: 0;
+  color: #007bff; /* Example bullet color */
+}

@@ -1,0 +1,142 @@
+:root {
+  --navbar-bg: black;
+  --navbar-text: white;
+  --navbar-link-hover: rgb(235, 105, 35);
+  --navbar-link-border-hover: rgb(35, 135, 235);
+  --btn-bg: white;
+  --btn-text: black;
+  --btn-hover-bg: rgb(198, 215, 15);
+  --logo-span-color: aqua;
+}
+
+body.dark-mode {
+  --navbar-bg: #1a1a1a;
+  --navbar-text: #eee;
+  --navbar-link-hover: #f0a500;
+  --navbar-link-border-hover: #00aaff;
+  --btn-bg: #222;
+  --btn-text: #eee;
+  --btn-hover-bg: #55cc55;
+  --logo-span-color: #00ffff;
+}
+
+
+
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10; 
+    padding: 0 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: var(--navbar-text);
+    transition: color 0.3s ease;
+}
+
+
+.btn {
+    height: 2.5rem;
+    width: auto;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    font-weight: 700;
+    border-radius: 5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+.logoh1 h1 span {
+    color: var(--logo-span-color);
+}
+
+/* Keep the media queries as is */
+
+/* Media query for smaller screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        flex-direction: column; /* Stack logo, links, and button vertically */
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoh1 {
+        margin-bottom: 1rem; /* Add some space below the logo */
+        text-align: center;
+    }
+
+    .logoh1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .list-container {
+        flex-direction: column; /* Stack list items vertically */
+        margin-bottom: 1rem;
+        width: 100%; /* Make the container take full width */
+        display: flex; /* Ensure flexbox properties apply to stacked items */
+        flex-direction: column; /* Double-check vertical stacking */
+        align-items: stretch; /* Stretch items to take full width */
+    }
+
+    .list {
+        
+        margin-left: 0.5rem;
+        margin-bottom: 0.8rem; /* Add vertical margin between list items */
+        text-align: center;
+        padding: 0.8rem 0; /* Increase vertical padding for better touch targets */
+        border-bottom: none; /* Remove bottom border by default on smaller screens */
+        width: 100%; /* Make each list item take full width */
+    }
+
+    .list:hover {
+        border-bottom: 3px solid rgb(35, 135, 235); /* Add border on hover if desired */
+        padding-bottom: 0.3rem;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        width: 7rem;
+        height: 3rem;
+    }
+}
+
+/* Media query for even smaller screens (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+    .logoh1 h1 {
+        font-size: 2rem;
+    }
+
+    .list {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem; /* Adjust spacing for very small screens */
+        /* padding: 0.3rem 0; Adjust padding for very small screens */
+        margin-left: 0.5rem;
+    }
+    
+
+    .btn {
+        font-size: 0.7rem;
+        width: 7rem;
+        height: 3rem;
+    }
+}
